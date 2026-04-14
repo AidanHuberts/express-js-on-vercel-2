@@ -14,18 +14,18 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 
 ### Clone and Deploy
 
-```bash
+\`\`\`bash
 git clone https://github.com/vercel/examples/tree/main/solutions/express
-```
+\`\`\`
 
 Install the Vercel CLI:
 
-```bash
+\`\`\`bash
 npm i -g vercel
-```
+\`\`\`
 
 Then run the app at the root of the repository:
 
-```bash
+\`\`\`bash
 vercel dev
-```
+\`\`\`
