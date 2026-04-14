@@ -1,0 +1,72 @@
+/* Brochure styles */
+.page {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.page:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.cover-page,
+.back-cover {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  border: 1px solid #ddd;
+}
+
+/* Page turn effect */
+@keyframes pageTurn {
+  0% {
+    transform: rotateY(0deg);
+    z-index: 10;
+  }
+  100% {
+    transform: rotateY(-180deg);
+    z-index: 0;
+  }
+}
+
+.page-turning {
+  animation: pageTurn 0.5s ease-in-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page {
+    max-width: 100%;
+  }
+}
+
+/* Touch swipe indicators */
+.swipe-indicator-left,
+.swipe-indicator-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.swipe-indicator-left {
+  left: 10px;
+}
+
+.swipe-indicator-right {
+  right: 10px;
+}
+
+.page:hover .swipe-indicator-left,
+.page:hover .swipe-indicator-right {
+  opacity: 0.7;
+}
